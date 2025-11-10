@@ -1,5 +1,5 @@
 .project-page-body{
-    background: linear-gradient(to right, #232526, #414345);
+    /* background: linear-gradient(to right, #232526, #414345); */
     color: #fff;
     min-height: 80vh;
     display: flex;
@@ -151,12 +151,13 @@
 .project-description {
   width: 90%;
   max-width: 1800px;
-  margin: 3rem auto;
+  margin: 2rem auto;
   padding: 2rem;
-  background: rgba(255, 255, 255, 0.03);
+  background: #282b2c;
   border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
-  border-left: 6px solid #8a2be2;
+  border: #da70d6 1px solid;
+  box-shadow: 10px 6px #701cbe;
+  /* border-left: 6px solid #8a2be2; */
   font-size: 1.3rem;
   color: #eaeaea;
 }
@@ -244,7 +245,7 @@
   }
 
   .project-description{
-    width: 97%;
+    width: 93%;
     padding: 1.2rem;
     margin: 2rem auto;
     font-size: 1.05rem;

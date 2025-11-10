@@ -4,7 +4,7 @@ import PublicBody from './PublicBody';
 
 const Public = () => {
   return (
-    <section className='public'>
+    <section>
       <PublicHeader />
       <PublicBody />
       <PublicFooter />

@@ -1,6 +1,6 @@
-.about-me-container{
+/* .about-me-container{
     background: linear-gradient(to right, #232526, #414345);
-}
+} */
 
 .about-body{
     min-height: 80vh;
@@ -24,10 +24,11 @@
 .about-me-paragraphs{
     font-size: 1.3rem;
     font-weight: 400;
-    background: rgba(255, 255, 255, 0.03);
+    background: #282b2c;
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border: #da70d6 1px solid;
+    box-shadow: 10px 6px #701cbe;
 }
 
 .about-me-paragraphs a {

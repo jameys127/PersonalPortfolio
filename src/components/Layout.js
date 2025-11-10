@@ -1,7 +1,15 @@
 import {Outlet} from 'react-router-dom';
+import './Layout.css';
 
 const Layout = () => {
-  return <Outlet />
+  return (
+    <div>
+      <div className='constant-background-container'>
+        <div className='constant-background'></div>
+      </div>
+      <Outlet />
+    </div>
+  )
 }
 
 export default Layout

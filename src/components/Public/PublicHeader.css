@@ -7,7 +7,9 @@
     font-size: 1.2rem;
     position: relative;
     top: 0;
-    z-index: 999;
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(to right, #8a2be2, #da70d6);
+    border-image-slice: 1;
 }
 
 .navbar-container{
@@ -20,7 +22,10 @@
 }
 
 .navbar-logo{
-    color: #fff;
+    background: linear-gradient(to right, #8a2be2, #da70d6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     justify-self: start;
     margin-left: 20px;
     cursor: pointer;
@@ -108,7 +113,9 @@
     padding: 0.5rem;
     opacity: 1;
     /* border-bottom: 1px solid #444; */
-    border-top: 1px solid #444;
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(to right, #8a2be2, #da70d6);
+    border-image-slice: 1;
   }
 
   .nav-links {

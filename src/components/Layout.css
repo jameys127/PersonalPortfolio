@@ -1,0 +1,23 @@
+.constant-background{
+    position: static;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    /* background-color: #2f2f2f; */
+    opacity: 0.7;
+    background-image:  
+            repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(75, 85, 99, 0.08) 19px, rgba(75, 85, 99, 0.08) 20px, transparent 20px, transparent 39px, rgba(75, 85, 99, 0.08) 39px, rgba(75, 85, 99, 0.08) 40px),
+            repeating-linear-gradient(90deg, transparent, transparent 19px, rgba(75, 85, 99, 0.08) 19px, rgba(75, 85, 99, 0.08) 20px, transparent 20px, transparent 39px, rgba(75, 85, 99, 0.08) 39px, rgba(75, 85, 99, 0.08) 40px),
+            radial-gradient(circle at 20px 20px, rgba(224, 0, 253, 0.2) 2px, transparent 2px),
+            radial-gradient(circle at 40px 40px, rgba(224, 0, 253, 0.2) 2px, transparent 2px);
+    background-size: 40px 40px, 40px 40px, 40px 40px, 40px 40px;
+    z-index: -1;
+}
+
+.constant-background-container{
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(to right, #191a1b, #2b2c2e);
+    /* background-attachment: fixed; */
+}
