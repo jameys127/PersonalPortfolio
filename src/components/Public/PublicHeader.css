@@ -1,5 +1,5 @@
 .navbar{
-    background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+    background: rgb(26, 23, 23);
     height: 90px;
     display: flex;
     justify-content: center;
@@ -10,6 +10,7 @@
     border-bottom: 1px solid transparent;
     border-image: linear-gradient(to right, #8a2be2, #da70d6);
     border-image-slice: 1;
+    z-index: 10;
 }
 
 .navbar-container{
@@ -113,7 +114,7 @@
     padding: 0.5rem;
     opacity: 1;
     /* border-bottom: 1px solid #444; */
-    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
     border-image: linear-gradient(to right, #8a2be2, #da70d6);
     border-image-slice: 1;
   }

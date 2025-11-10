@@ -2,6 +2,7 @@ import React from 'react'
 import SwiperComponent from '../SwiperComponent';
 import './ProjectPage.css'
 import Button from '@mui/material/Button';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import api from '../../app/api/api';
@@ -12,6 +13,17 @@ import AnimatedRoutes from '../../features/animated/AnimatedRoutes';
 
 
 const ProjectPage = () => {
+
+    const projectTheme = createTheme({
+        palette: {
+            myWhite: {
+                main: '#fff',
+                light: '#fdddddff',
+                dark: '#dbdbdbff',
+                contrastText: '#242105',
+            },
+        },
+    });
 
     const {slug} = useParams();
     const {isPending, error, data} = useQuery({
@@ -31,6 +43,7 @@ const ProjectPage = () => {
     if(!data){
         return null
     }
+
   return (
     <div className='project-page-body'>
         <AnimatedRoutes>
@@ -42,10 +55,11 @@ const ProjectPage = () => {
         <div className='project-header-bar'>
             <h1 className='project-title'>{data[0].title}</h1>
             <div className='project-buttons'>
+                <ThemeProvider theme={projectTheme}>
                 <Button
                     href={data[0].github}
                     variant='outlined'
-                    color='secondary'
+                    color='myWhite'
                     size='large'
                 >
                     Github Page
@@ -53,11 +67,12 @@ const ProjectPage = () => {
                 <Button
                     href={data[0].link}
                     variant='outlined'
-                    color='secondary'
+                    color='myWhite'
                     size='large'
                 >
                     View
                 </Button>
+                </ThemeProvider>
             </div>
         </div>
         <div className='project-description'>
