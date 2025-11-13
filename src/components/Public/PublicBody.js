@@ -20,9 +20,9 @@ const PublicBody = () => {
   const ColorButton = styled(Button)(({theme}) => ({
     color: '#fff',
     background: '#282b2c',
-    boxShadow: '6px 4px #701cbe',
+    boxShadow: '5px 5px #701cbe',
     ":hover": {
-      boxShadow: '6px 4px #8826e4ff'
+      boxShadow: '5px 5px #8826e4ff'
     }
   }))
 

@@ -26,10 +26,10 @@ const CardItem = (prop) => {
         height: 'auto',
         backgroundColor: 'transparent',
         // borderRadius: 3,
-        border: '#aa5ea8ff 1px solid',
-        boxShadow: '10px 8px #701cbe',
+        border: '#da70d6 1px solid',
+        boxShadow: '8px 8px #701cbe',
         '&:hover': {
-            transform: 'scale(1.04)'
+            transform: 'scale(1.03)'
         },
         transition: 'all 0.3s ease'
         }}>
