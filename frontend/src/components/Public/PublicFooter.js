@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import './PublicFooter.css'
 
 const PublicFooter = () => {
@@ -29,7 +29,7 @@ const PublicFooter = () => {
           </a>
         </li>
       </ul>
-      <Link to={'/login'} className='to-private'>
+      <Link href={'/login'} className='to-private'>
         If you're me <i className="fa-solid fa-arrow-right"></i>
       </Link>
     </footer>

@@ -1,16 +1,21 @@
-import {useAuth} from '../../app/context/AuthContext';
-import { Navigate, Outlet, useLocation } from 'react-router-dom';
+'use client'
 
-const RequireAuth = () => {
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import {useAuth} from '../../lib/AuthContext';
+
+const RequireAuth = ({children}) => {
     const {auth, loading} = useAuth();
-    const location = useLocation();
+    const router = useRouter();
+    const allowed = !loading && auth?.accessToken;
 
-    if(loading) return null;
+    // Sign out sets redirectTo: '/' so it lands on the home page instead of /login
+    useEffect(() => {
+        if(!loading && !auth?.accessToken) router.replace(auth?.redirectTo || '/login');
+    }, [loading, auth, router]);
 
-    if(!auth?.accessToken) {
-        return <Navigate to='/login' state={{from: location}} replace />;
-    }
-    return <Outlet />
+    if(!allowed) return null;
+    return children;
 }
 
 export default RequireAuth;

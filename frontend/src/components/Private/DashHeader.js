@@ -1,12 +1,13 @@
-import {Link, useNavigate} from 'react-router-dom'
+'use client'
+
+import Link from 'next/link'
 import './DashHeader.css'
 import { useMutation } from '@tanstack/react-query';
-import api from '../../app/api/api';
-import { useAuth } from '../../app/context/AuthContext';
+import api from '../../lib/api';
+import { useAuth } from '../../lib/AuthContext';
 
 const DashHeader = () => {
   const {setAuth} = useAuth();
-  const navigate = useNavigate();
 
   const logout = () => {
     logoutMutation.mutate();
@@ -18,21 +19,21 @@ const DashHeader = () => {
       return res.data;
     },
     onSuccess: (data) => {
-      setAuth({accessToken: null});
-      navigate('/');
+      // RequireAuth handles the redirect once the token is cleared
+      setAuth({accessToken: null, redirectTo: '/'});
     }
   })
 
   return (
     <nav className='dash-navbar'>
       <div className='dash-navbar-container'>
-        <Link to='/dash' className='dash-navbar-logo'>
+        <Link href='/dash' className='dash-navbar-logo'>
           Dashboard <i className='fa-solid fa-code' />
         </Link>
         <ul className='dash-nav-menu'>
           <li className='dash-nav-item' onClick={logout}>
             <div className='dash-nav-links'>
-              <i class="fa-solid fa-arrow-right-from-bracket" /> SignOut
+              <i className="fa-solid fa-arrow-right-from-bracket" /> SignOut
             </div>
           </li>
         </ul>

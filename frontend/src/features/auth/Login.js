@@ -1,9 +1,12 @@
+'use client'
+
 import React, { useState } from 'react'
 import './Login.css'
-import { Link, useNavigate } from 'react-router-dom'
-import api from '../../app/api/api';
+import Link from 'next/link'
+import { useRouter } from 'next/navigation'
+import api from '../../lib/api';
 import { useMutation } from '@tanstack/react-query';
-import { useAuth } from '../../app/context/AuthContext';
+import { useAuth } from '../../lib/AuthContext';
 
 
 const Login = () => {
@@ -11,7 +14,7 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [errMsg, setErrMsg] = useState('');
   const {setAuth} = useAuth();
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const submit = (e) => {
     e.preventDefault();
@@ -25,7 +28,7 @@ const Login = () => {
     },
     onSuccess: (data) => {
       setAuth({accessToken: data.accessToken});
-      navigate('/dash')
+      router.push('/dash')
     },
     onError: (err) => {
       if(!err.response){
@@ -53,7 +56,7 @@ const Login = () => {
   return (
     <div className='login-container'>
       <div className='login'>
-        <Link to={'/'} className='login-back'><i className='fa-solid fa-arrow-left'/> Back</Link>
+        <Link href={'/'} className='login-back'><i className='fa-solid fa-arrow-left'/> Back</Link>
         <h1 className='login-title'>Welcome, Me</h1>
         <form onSubmit={submit}>
           <div className='login-inputs'>

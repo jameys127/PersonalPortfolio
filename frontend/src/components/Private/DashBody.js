@@ -1,13 +1,15 @@
+'use client'
+
 import { useQuery } from '@tanstack/react-query'
 import React from 'react'
-import api from '../../app/api/api'
+import api from '../../lib/api'
 import CardItem from '../Public/CardItem'
 import './DashBody.css'
 import Card from '@mui/material/Card'
 import Typography from '@mui/material/Typography'
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline'
 import CardActionArea from '@mui/material/CardActionArea'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 
 const DashBody = () => {
 
@@ -50,7 +52,7 @@ const DashBody = () => {
               transition: 'all 0.3s ease'
             }}
           >
-            <CardActionArea LinkComponent={Link} to={'/dash/create'} sx={{
+            <CardActionArea LinkComponent={Link} href={'/dash/create'} sx={{
               height: '100%',
               display: 'flex',
               flexDirection: 'column',
@@ -97,7 +99,7 @@ const DashBody = () => {
               transition: 'all 0.3s ease'
             }}
           >
-            <CardActionArea LinkComponent={Link} to={'/dash/create'} sx={{
+            <CardActionArea LinkComponent={Link} href={'/dash/create'} sx={{
               height: '100%',
               display: 'flex',
               flexDirection: 'column',
@@ -153,7 +155,7 @@ const DashBody = () => {
               transition: 'all 0.3s ease'
             }}
           >
-            <CardActionArea LinkComponent={Link} to={'/dash/create'} sx={{
+            <CardActionArea LinkComponent={Link} href={'/dash/create'} sx={{
               height: '100%',
               display: 'flex',
               flexDirection: 'column',

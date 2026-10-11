@@ -1,16 +1,11 @@
 import React from 'react'
-import {motion} from 'framer-motion';
 
+// Fade + slight rise when a page mounts. The animation lives in index.css (.page-in)
 const AnimatedRoutes = ({children}) => {
   return (
-    <motion.div
-        initial={{opacity: 0}}
-        animate={{opacity: 1}}
-        exit={{opacity: 0}}
-        transition={{duration: 0.2}}
-    >
+    <div className='page-in'>
         {children}
-    </motion.div>
+    </div>
   )
 }
 

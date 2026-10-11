@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-    baseURL: process.env.REACT_APP_API_URL || 'https://api.jeremiahsheehy.dev',
+    baseURL: process.env.NEXT_PUBLIC_API_URL || 'https://api.jeremiahsheehy.dev',
     withCredentials: true,
 });
 
