@@ -5,6 +5,7 @@ const AuthContext = createContext(null);
 
 const AuthProvider = ({children}) => {
     const [auth, setAuth] = useState({accessToken: null});
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const verifyRefreshToken = async () => {
@@ -13,13 +14,15 @@ const AuthProvider = ({children}) => {
                 setAuth({accessToken: res.data.accessToken});
             }catch (err){
                 console.log('No valid refresh token');
+            }finally{
+                setLoading(false);
             }
         }
         verifyRefreshToken();
     }, []);
 
     return (
-        <AuthContext.Provider value={{auth, setAuth}}>
+        <AuthContext.Provider value={{auth, setAuth, loading}}>
             {children}
         </AuthContext.Provider>
     );
