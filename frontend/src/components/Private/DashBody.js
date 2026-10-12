@@ -41,7 +41,7 @@ const DashBody = () => {
               alignItems: 'center',
               justifyContent: 'center',
               flexDirection: 'column',
-              color: '#fff',
+              color: 'var(--color-text)',
               cursor: 'pointer',
               '&:hover': {
                   transform: 'scale(1.04)',
@@ -88,7 +88,7 @@ const DashBody = () => {
               alignItems: 'center',
               justifyContent: 'center',
               flexDirection: 'column',
-              color: '#fff',
+              color: 'var(--color-text)',
               cursor: 'pointer',
               '&:hover': {
                   transform: 'scale(1.04)',
@@ -144,7 +144,7 @@ const DashBody = () => {
               alignItems: 'center',
               justifyContent: 'center',
               flexDirection: 'column',
-              color: '#fff',
+              color: 'var(--color-text)',
               cursor: 'pointer',
               '&:hover': {
                   transform: 'scale(1.04)',

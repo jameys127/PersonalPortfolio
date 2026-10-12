@@ -1,6 +1,6 @@
 .dash-footer-container{
-    background: linear-gradient(135deg, #1a1a1d, #232526, #414345);
-    color: #fff;
+    background: var(--gradient-bg);
+    color: var(--color-text);
 }
 .dash-footer{
     display: flex;

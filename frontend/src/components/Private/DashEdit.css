@@ -1,22 +1,22 @@
 .edit-container {
-  background: linear-gradient(to right, #232526, #414345);
+  background: var(--gradient-bg);
   min-height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3rem 1.5rem;
-  color: #f3f3f3;
+  padding: var(--space-7) var(--space-5);
+  color: var(--color-text);
   font-family: 'Inter', sans-serif;
 }
 
 .edit-page-title {
-  background: linear-gradient(90deg, #8a2be2, #da70d6);
+  background: var(--gradient-accent);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 2.5rem;
-    margin-bottom: 2rem;
-    margin-top: 1rem;
+    margin-bottom: var(--space-6);
+    margin-top: var(--space-4);
     letter-spacing: 1px;
 }
 
@@ -26,19 +26,19 @@
   gap: 1.25rem;
   width: 100%;
   max-width: 650px;
-  background: #26292b;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: 10px;
-  padding: 2rem;
+  padding: var(--space-6);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
 
 .edit-input,
 .edit-textarea {
-  background: #1c1e20;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  color: #e7e7e7;
-  padding: 0.85rem 1rem;
+  background: var(--color-surface-sunken);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  padding: 0.85rem var(--space-4);
   border-radius: 6px;
   font-size: 1rem;
   transition: all 0.2s ease;
@@ -46,42 +46,42 @@
 
 .edit-input::placeholder,
 .edit-textarea::placeholder {
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--color-text-subtle);
 }
 
 .edit-input:focus,
 .edit-textarea:focus {
-  background: #212427;
-  border-color: #da70d6;
-  box-shadow: 0 0 0 2px rgba(111, 140, 255, 0.15);
+  background: var(--color-surface);
+  border-color: var(--color-accent-2);
+  box-shadow: 0 0 0 2px var(--color-focus-ring);
   outline: none;
 }
 
 .char-counter {
   text-align: right;
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.45);
+  color: var(--color-text-subtle);
   margin-top: -0.5rem;
 }
 
 .char-counter.warning {
-  color: #ff8585;
+  color: var(--color-error);
 }
 
 .button-container {
   display: flex;
   justify-content: space-between;
-  gap: 0.75rem;
-  margin-top: 1rem;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
 }
 
 .edit-submit-btn {
-  background: #32363a;
-  color: #f3f3f3;
+  background: var(--color-surface-raised);
+  color: var(--color-text);
   width: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--color-border);
   border-radius: 6px;
-  padding: 0.75rem 1.25rem;
+  padding: var(--space-3) 1.25rem;
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
@@ -89,62 +89,62 @@
 }
 
 .edit-submit-btn:hover {
-  background: #3b3f44;
-  border-color: rgba(255, 255, 255, 0.25);
+  background: var(--color-surface-hover);
+  border-color: var(--color-border-strong);
   transform: translateY(-1px);
 }
 
 .ql-container {
-  background: #1c1e20;
-  color: #f3f3f3;
+  background: var(--color-surface-sunken);
+  color: var(--color-text);
   border-radius: 6px;
   min-height: 220px;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid var(--color-border) !important;
   transition: all 0.2s ease;
 }
 
 .ql-container:focus-within {
-  border-color: #da70d6 !important;
-  box-shadow: 0 0 8px #d8a7ff;
+  border-color: var(--color-accent-2) !important;
+  box-shadow: 0 0 8px var(--color-accent-soft);
 }
 
 .ql-toolbar {
-  background: #202325;
+  background: var(--color-surface-sunken);
   border-radius: 6px 6px 0 0;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid var(--color-border) !important;
 }
 
 .ql-editor {
   min-height: 160px;
-  color: #f3f3f3;
+  color: var(--color-text);
   font-size: 1rem;
 }
 
 .ql-editor.ql-blank::before {
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--color-text-subtle);
 }
 
 .ql-toolbar button .ql-stroke {
-  stroke: #cfcfcf !important;
+  stroke: var(--color-text-muted) !important;
 }
 .ql-toolbar button .ql-fill {
-  fill: #cfcfcf !important;
+  fill: var(--color-text-muted) !important;
 }
 
 .ql-toolbar button.ql-active .ql-stroke,
 .ql-toolbar button.ql-active .ql-fill {
-  stroke: #ffffff !important;
+  stroke: var(--color-text) !important;
 }
 
 .ql-toolbar button:hover .ql-stroke,
 .ql-toolbar button:hover .ql-fill {
-  stroke: #ffffff !important;
+  stroke: var(--color-text) !important;
 }
 
 .error{
     position: relative;
     bottom: 30px;
-    color: #ff0000;
+    color: var(--color-error);
     font-weight: 400;
     text-align: center;
 }

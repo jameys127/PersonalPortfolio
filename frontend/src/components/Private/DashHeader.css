@@ -1,5 +1,5 @@
 .dash-navbar{
-    background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+    background: var(--color-nav);
     height: 90px;
     display: flex;
     justify-content: center;
@@ -20,7 +20,7 @@
 }
 
 .dash-navbar-logo{
-    color: #fff;
+    color: var(--color-text);
     justify-self: start;
     margin-left: 20px;
     cursor: pointer;
@@ -52,18 +52,20 @@
 }
 
 .dash-nav-links{
-    color: #fff;
+    color: var(--color-text);
     display: flex;
     align-items: center;
     text-decoration: none;
-    padding: 0.5rem 1rem;
+    padding: var(--space-2) var(--space-4);
     height: 100%;
     cursor: pointer;
+    /* Border is always there so hovering only changes its color (no jump) */
+    border-bottom: 4px solid transparent;
+    transition: border-color 0.2s ease-out;
 }
 
 .dash-nav-links:hover{
-    border-bottom: 4px solid #fff;
-    transition: all 0.2 ease-out;
+    border-bottom-color: var(--color-text);
 }
 
 .fa-arrow-right-from-bracket{

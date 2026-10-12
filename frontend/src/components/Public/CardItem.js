@@ -28,8 +28,8 @@ const CardItem = (prop) => {
         height: 'auto',
         backgroundColor: 'transparent',
         // borderRadius: 3,
-        border: '#da70d6 1px solid',
-        boxShadow: '8px 8px #701cbe',
+        border: 'var(--color-accent-2) 1px solid',
+        boxShadow: '8px 8px var(--color-shadow)',
         '&:hover': {
             transform: 'scale(1.03)'
         },
@@ -48,7 +48,7 @@ const CardItem = (prop) => {
             {pathname === '/dash' && ( 
                 <Box sx={{
                     position: 'absolute',
-                    color: '#fff',
+                    color: 'var(--color-text)',
                     top: 80,
                     width: '100%',
                     textAlign: 'center',
@@ -58,10 +58,10 @@ const CardItem = (prop) => {
                     fontSize: '2rem'
                 }}>Edit</Box>
             )}
-            <CardContent sx={{color: 'white', background: '#23282b'}}>
+            <CardContent sx={{color: 'var(--color-text)', background: 'var(--color-surface)'}}>
                 <Typography gutterBottom variant="h5" component="div" sx={{fontWeight: 700}}>{prop.title}</Typography>
                 <Typography textAlign="left" sx={{
-                    color: 'white',
+                    color: 'var(--color-text)',
                     overflow: 'hidden',
                     display: '-webkit-box',
                     WebkitLineClamp: 2,

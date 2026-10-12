@@ -20,11 +20,11 @@ const PublicBody = ({projects}) => {
   })
 
   const ColorButton = styled(Button)(({theme}) => ({
-    color: '#fff',
-    background: '#282b2c',
-    boxShadow: '5px 5px #701cbe',
+    color: 'var(--color-text)',
+    background: 'var(--color-surface)',
+    boxShadow: '5px 5px var(--color-shadow)',
     ":hover": {
-      boxShadow: '5px 5px #8826e4ff'
+      boxShadow: '5px 5px var(--color-shadow-hover)'
     }
   }))
 

@@ -18,6 +18,6 @@
     position: fixed;
     inset: 0;
     z-index: -1;
-    background: linear-gradient(to right, #191a1b, #2b2c2e);
+    background: var(--gradient-bg);
     /* background-attachment: fixed; */
 }

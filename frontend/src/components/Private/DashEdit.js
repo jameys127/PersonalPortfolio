@@ -168,7 +168,7 @@ const DashEdit = () => {
             maxLength={30}
             required
           />
-          <div style={{ textAlign: 'right', fontSize: '0.9rem', color: '#aaa' }}>
+          <div style={{ textAlign: 'right', fontSize: '0.9rem', color: 'var(--color-text-subtle)' }}>
             {title.length}/30
           </div>
           <input
@@ -193,7 +193,7 @@ const DashEdit = () => {
             onChange={(e) => setShort(e.target.value)}
             maxLength={100}
           />
-          <div style={{ textAlign: 'right', fontSize: '0.9rem', color: '#aaa' }}>
+          <div style={{ textAlign: 'right', fontSize: '0.9rem', color: 'var(--color-text-subtle)' }}>
             {(short || '').length}/100
           </div>
           <div ref={quillRef} />
@@ -263,7 +263,7 @@ const DashEdit = () => {
             maxLength={30}
             required
           />
-          <div style={{ textAlign: 'right', fontSize: '0.9rem', color: '#aaa' }}>
+          <div style={{ textAlign: 'right', fontSize: '0.9rem', color: 'var(--color-text-subtle)' }}>
             {title.length}/30
           </div>
           <input
@@ -289,7 +289,7 @@ const DashEdit = () => {
             maxLength={100}
             minLength={60}
           />
-          <div style={{ textAlign: 'right', fontSize: '0.9rem', color: '#aaa' }}>
+          <div style={{ textAlign: 'right', fontSize: '0.9rem', color: 'var(--color-text-subtle)' }}>
             {(short || '').length}/100
           </div>
           <div ref={quillRef} />

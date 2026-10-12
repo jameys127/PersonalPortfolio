@@ -1,5 +1,5 @@
 .navbar{
-    background: rgb(26, 23, 23);
+    background: var(--color-nav);
     height: 90px;
     display: flex;
     justify-content: center;
@@ -8,7 +8,7 @@
     position: relative;
     top: 0;
     border-bottom: 1px solid transparent;
-    border-image: linear-gradient(to right, #8a2be2, #da70d6);
+    border-image: var(--gradient-accent);
     border-image-slice: 1;
     z-index: 10;
 }
@@ -23,7 +23,7 @@
 }
 
 .navbar-logo{
-    background: linear-gradient(to right, #8a2be2, #da70d6);
+    background: var(--gradient-accent);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -61,21 +61,23 @@
 }
 
 .nav-links{
-    color: #fff;
+    color: var(--color-text);
     display: flex;
     align-items: center;
     text-decoration: none;
-    padding: 0.5rem 1rem;
+    padding: var(--space-2) var(--space-4);
     height: 100%;
+    /* Border is always there so hovering only changes its color (no jump) */
+    border-bottom: 4px solid transparent;
+    transition: border-color 0.2s ease-out;
 }
 
 .nav-links:hover{
-    border-bottom: 4px solid #fff;
-    transition: all 0.2 ease-out;
+    border-bottom-color: var(--color-text);
 }
 
 .fa-bars{
-    color: #fff;
+    color: var(--color-text);
 }
 
 .menu-icon{
@@ -91,7 +93,7 @@
     top: 90px;
     left: 0;
     overflow: hidden;
-    background: #242222;
+    background: var(--color-nav);
     opacity: 0;
     max-height: 0;
     transition: all 0.3s ease;
@@ -111,11 +113,11 @@
 
   .nav-menu.active li {
     height: 60px;
-    padding: 0.5rem;
+    padding: var(--space-2);
     opacity: 1;
     /* border-bottom: 1px solid #444; */
     border-top: 1px solid transparent;
-    border-image: linear-gradient(to right, #8a2be2, #da70d6);
+    border-image: var(--gradient-accent);
     border-image-slice: 1;
   }
 
@@ -147,28 +149,28 @@
   }
 
   .fa-times {
-    color: #fff;
+    color: var(--color-text);
     font-size: 2rem;
   }
 
   .nav-links-mobile {
     display: block;
     text-align: center;
-    margin: 2rem auto;
+    margin: var(--space-6) auto;
     border-radius: 4px;
     width: 80%;
     text-decoration: none;
     font-size: 1.5rem;
     background-color: transparent;
-    color: #fff;
+    color: var(--color-text);
     padding: 14px 20px;
-    border: 1px solid #fff;
+    border: 1px solid var(--color-text);
     transition: all 0.3s ease-out;
   }
 
   .nav-links-mobile:hover {
-    background: #fff;
-    color: #242424;
+    background: var(--color-text);
+    color: var(--color-surface);
     transition: 250ms;
   }
 

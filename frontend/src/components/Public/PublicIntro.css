@@ -2,12 +2,12 @@
     width: 100%;
     display: flex;
     align-items: center;
-    color: #fff;
+    color: var(--color-text);
     text-align: center;
-    padding: 4rem 0;
+    padding: var(--space-8) 0;
     max-width: 1100px;
     margin: 0 auto;
-    margin-bottom: 2rem;
+    margin-bottom: var(--space-6);
     
 }
 .intro-box{
@@ -22,13 +22,13 @@
 }
 
 .intro-para{
-    margin-top: 1rem;
+    margin-top: var(--space-4);
     font-size: 1.6rem;
-    background: #282b2c;
+    background: var(--color-surface);
     border-radius: 4px;
-    border: 1px solid #da70d6;
-    box-shadow: 8px 8px #701cbe;
-    padding: 0rem 2rem;
+    border: 1px solid var(--color-accent-2);
+    box-shadow: 8px 8px var(--color-shadow);
+    padding: 0rem var(--space-6);
     min-height: 400px;
     align-content: center;
 }
@@ -44,8 +44,8 @@
     background: linear-gradient(90deg, #7821c9, #b444b1);
     transform: skewY(-2deg);
     width: 100%;
-    margin-top: 1rem;
-    padding: 2rem 0;
+    margin-top: var(--space-4);
+    padding: var(--space-6) 0;
 } */
 
 /* .intro-bar p{
@@ -58,13 +58,13 @@
 
 @media (max-width: 1024px) {
     .intro-container{
-        padding: 4rem 2rem;
+        padding: var(--space-8) var(--space-6);
     }
     .intro-flex{
         gap: 60px;
     }
     .intro-para{
-        padding: 1rem 2rem;
+        padding: var(--space-4) var(--space-6);
         font-size: 1.2rem;
         min-height: 300px;
     }
@@ -75,7 +75,7 @@
 
 @media (max-width: 700px) {
     .intro-container{
-        padding: 3rem 1.5rem;
+        padding: var(--space-7) var(--space-5);
     }
     .intro-box{
         font-size: 1.3rem;
@@ -91,7 +91,7 @@
         font-size: 1.15rem;
     }
     .intro-image{
-        padding-top: 1rem;
+        padding-top: var(--space-4);
     }
     .intro-image > img{
         width: 200px;

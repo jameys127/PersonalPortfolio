@@ -1,3 +1,45 @@
+/* Design tokens: use these instead of hardcoded colors and spacing */
+:root{
+  /* Backgrounds, darkest to lightest */
+  --color-bg-start: #121314;
+  --color-bg-end: #1e1f21;
+  --color-nav: #141516;
+  --color-surface-sunken: #161718;
+  --color-surface: #1d1f21;
+  --color-surface-raised: #2a2d30;
+  --color-surface-hover: #34373b;
+
+  /* Text */
+  --color-text: #f3f3f3;
+  --color-text-muted: #c4c4c4;
+  --color-text-subtle: #8f8f8f;
+
+  /* Borders */
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-strong: rgba(255, 255, 255, 0.25);
+
+  /* Accents */
+  --color-accent: #8a2be2;
+  --color-accent-2: #da70d6;
+  --color-accent-soft: #d8a7ff;
+  --color-link: #b66cff;
+  --color-shadow: #701cbe;
+  --color-shadow-hover: #8826e4;
+  --color-focus-ring: rgba(218, 112, 214, 0.2);
+  --color-error: #ff5c5c;
+  --gradient-accent: linear-gradient(90deg, var(--color-accent), var(--color-accent-2));
+  --gradient-bg: linear-gradient(to right, var(--color-bg-start), var(--color-bg-end));
+
+  /* Spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+}
 
 *{
   box-sizing: border-box;
@@ -11,7 +53,7 @@
   display: flex;
   min-height: 80vh;
   /* background: linear-gradient(to right, #232526, #414345); */
-  color: #fff;
+  color: var(--color-text);
   text-align: center;
   align-items: center;
   justify-content: center;
