@@ -1,19 +1,18 @@
-'use client'
-
 import React from 'react'
 import SwiperComponent from '../SwiperComponent';
 import './ProjectPage.css'
 import Button from '@mui/material/Button';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
-import api from '../../lib/api';
+import api from '../../app/api/api';
 import parse from 'html-react-parser';
-import DOMPurify from 'isomorphic-dompurify'
+import DOMPurify from 'dompurify'
 import CircularProgress from '@mui/material/CircularProgress';
 import AnimatedRoutes from '../../features/animated/AnimatedRoutes';
 
 
-const ProjectPage = ({slug, initialData}) => {
+const ProjectPage = () => {
 
     const projectTheme = createTheme({
         palette: {
@@ -26,13 +25,13 @@ const ProjectPage = ({slug, initialData}) => {
         },
     });
 
+    const {slug} = useParams();
     const {isPending, error, data} = useQuery({
         queryKey: [`${slug}`],
         queryFn: async () => {
             const res = await api.get(`/projects/${slug}`);
             return res.data;
-        },
-        initialData
+        }
     });
 
     if(isPending){

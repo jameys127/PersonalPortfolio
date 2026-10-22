@@ -1,23 +1,20 @@
-'use client'
-
 import React from 'react'
 import CardItem from './CardItem'
 import './Cards.css'
-import { usePathname } from 'next/navigation'
+import { useLocation } from 'react-router-dom'
 import {useQuery} from '@tanstack/react-query'
-import api from '../../lib/api'
+import api from '../../app/api/api'
 import CircularProgress from '@mui/material/CircularProgress';
 
-const Cards = ({initialData}) => {
+const Cards = () => {
 
-  const pathname = usePathname();
+  const {pathname} = useLocation();
   const {isPending, error, data} = useQuery({
     queryKey: ['projects'],
     queryFn: async () => {
       const res = await api.get('/projects');
       return res.data;
-    },
-    initialData
+    }
   });
 
   if(isPending){

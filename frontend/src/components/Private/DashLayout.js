@@ -1,13 +1,14 @@
-import { Fragment } from 'react';
+import {Outlet} from 'react-router-dom';
+import { Fragment } from 'react/jsx-runtime';
 import DashHeader from './DashHeader';
 import DashFooter from './DashFooter';
 
-const DashLayout = ({children}) => {
+const DashLayout = () => {
   return (
     <Fragment>
         <DashHeader />
         <div className='dash-container'>
-            {children}
+            <Outlet />
         </div>
         <DashFooter />
     </Fragment>

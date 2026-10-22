@@ -1,12 +1,10 @@
-'use client'
-
 import React, { useState, useEffect } from 'react'
-import { usePathname, useRouter, useParams } from 'next/navigation'
+import {useLocation, useNavigate, useParams } from 'react-router-dom'
 import {useQuill} from 'react-quilljs'
 import 'quill/dist/quill.snow.css'
 import './DashEdit.css'
 import { useMutation, useQuery } from '@tanstack/react-query'
-import api from '../../lib/api'
+import api from '../../app/api/api'
 import CircularProgress from '@mui/material/CircularProgress'
 
 const DashEdit = () => {
@@ -17,9 +15,9 @@ const DashEdit = () => {
   const [description, setDescription] = useState('');
   const [img, setImg] = useState([]);
   const [err, setErr] = useState('');
-  const router = useRouter();
+  const navigate = useNavigate();
   const {slug} = useParams();
-  const pathname = usePathname();
+  const {pathname} = useLocation();
   const isCreate = pathname === '/dash/create';
 
   //get query
@@ -50,7 +48,7 @@ const DashEdit = () => {
       return res.data;
     },
     onSuccess: () => {
-      router.push('/dash');
+      navigate('/dash');
     },
     onError: (err) => {
       setErr(`Error: ${err.response.data.message}`) 
@@ -63,7 +61,7 @@ const DashEdit = () => {
       return res.data;
     },
     onSuccess: () => {
-      router.push('/dash')
+      navigate('/dash')
     },
     onError: (err) => {
       setErr(`Error: ${err.response.data.message}`) 
@@ -76,7 +74,7 @@ const DashEdit = () => {
       return res.data;
     },
     onSuccess: () => {
-      router.push('/dash');
+      navigate('/dash');
     },
     onError: (err) => {
       setErr(`Error: ${err.response.data.message}`);
@@ -118,7 +116,7 @@ const DashEdit = () => {
   }
 
   const handleCancel = () => {
-    router.push('/dash');
+    navigate('/dash');
   }
 
   const handleDelete = () => {

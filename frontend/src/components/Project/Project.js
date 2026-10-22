@@ -3,7 +3,7 @@ import Cards from '../Public/Cards';
 import './Project.css';
 import AnimatedRoutes from '../../features/animated/AnimatedRoutes';
 
-const Projects = ({projects}) => {
+const Projects = () => {
 
   return (
     <div className='project-section'>
@@ -15,7 +15,7 @@ const Projects = ({projects}) => {
           <h3>From video games to custom compilers!</h3>
         </div>
         <div className='card-grid'>
-          <Cards initialData={projects} />
+          <Cards />
         </div>
       </AnimatedRoutes>
     </div>

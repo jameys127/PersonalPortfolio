@@ -1,7 +1,5 @@
-'use client'
-
 import React, { useState } from 'react'
-import Link from 'next/link'
+import { Link } from 'react-router-dom'
 import './PublicHeader.css';
 
 const PublicHeader = () => {
@@ -14,7 +12,7 @@ const PublicHeader = () => {
   return (
     <nav className='navbar'>
       <div className='navbar-container'>
-        <Link href='/' className='navbar-logo'>
+        <Link to='/' className='navbar-logo'>
           Jeremiah<span className='last-name'>Sheehy</span> <i className='fa-solid fa-code' />
         </Link>
         <div className='menu-icon' onClick={handleClick}>
@@ -22,17 +20,17 @@ const PublicHeader = () => {
         </div>
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
           <li className='nav-item'>
-            <Link href='/' className='nav-links' onClick={closeMobileMenu}>
+            <Link to='/' className='nav-links' onClick={closeMobileMenu}>
               Home
             </Link>
           </li>
           <li className='nav-item'>
-            <Link href='/about' className='nav-links' onClick={closeMobileMenu}>
+            <Link to='/about' className='nav-links' onClick={closeMobileMenu}>
               About
             </Link>
           </li>
           <li className='nav-item'>
-            <Link href='/projects' className='nav-links' onClick={closeMobileMenu}>
+            <Link to='/projects' className='nav-links' onClick={closeMobileMenu}>
               Projects
             </Link>
           </li>

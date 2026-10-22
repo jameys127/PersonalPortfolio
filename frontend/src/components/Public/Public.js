@@ -2,11 +2,11 @@ import PublicFooter from './PublicFooter';
 import PublicHeader from './PublicHeader';
 import PublicBody from './PublicBody';
 
-const Public = ({projects}) => {
+const Public = () => {
   return (
     <section>
       <PublicHeader />
-      <PublicBody projects={projects} />
+      <PublicBody />
       <PublicFooter />
     </section>
   )

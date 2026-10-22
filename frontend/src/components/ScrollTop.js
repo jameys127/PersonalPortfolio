@@ -1,10 +1,8 @@
-'use client'
-
-import { useEffect } from 'react'
-import { usePathname } from 'next/navigation';
+import React, { useEffect } from 'react'
+import { useLocation } from 'react-router-dom';
 
 const ScrollTop = () => {
-    const pathname = usePathname();
+    const {pathname} = useLocation();
     useEffect(() => {
         window.scrollTo({
             top: 0,

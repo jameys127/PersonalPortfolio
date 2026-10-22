@@ -1,5 +1,3 @@
-'use client'
-
 import React from 'react'
 import Card from '@mui/material/Card';
 import Box from '@mui/material/Card';
@@ -8,11 +6,11 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
 import './CardItem.css'
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 const CardItem = (prop) => {
-    const pathname = usePathname();
+    const {pathname} = useLocation();
     let cardLink = '';
     if(pathname === '/projects' || pathname === '/'){
         cardLink = `/projects/${prop.slug}`;
@@ -35,7 +33,7 @@ const CardItem = (prop) => {
         },
         transition: 'all 0.3s ease'
         }}>
-        <CardActionArea LinkComponent={Link} href={cardLink}>
+        <CardActionArea LinkComponent={Link} to={cardLink}>
             <CardMedia
                 component="img"
                 height="200"

@@ -1,15 +1,13 @@
-'use client'
-
 import React from 'react'
 import PublicIntro from './PublicIntro'
 import './PublicBody.css'
 import Cards from './Cards';
 import Button from '@mui/material/Button';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import AnimatedRoutes from '../../features/animated/AnimatedRoutes';
 import { createTheme, styled, ThemeProvider } from '@mui/material/styles';
 
-const PublicBody = ({projects}) => {
+const PublicBody = () => {
 
   const myTheme = createTheme({
     palette: {
@@ -33,13 +31,13 @@ const PublicBody = ({projects}) => {
       <AnimatedRoutes>
       <PublicIntro />
       <div className='card-grid-section'>
-        <Cards initialData={projects} />
+        <Cards />
       </div>
       <div className='button-container'>
         <ThemeProvider theme={myTheme}>
           <ColorButton 
             component={Link} 
-            href="/projects" 
+            to="/projects" 
             variant='outlined' 
             color='violet'
             size='large'
